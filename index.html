@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+	<style>
+		body {
+			display: flex;
+			min-height: 100vh;
+			flex-direction: column;
+		}
+		main {
+			flex: 1 0 auto;
+		}
+
+		nav.top-nav {
+			height: 122px;
+			line-height: 122px;
+			font-size: 48px;
+			box-shadow: none;
+		}
+
+		// Class for when element is above threshold
+		.pin-top {
+			position: relative;
+		}
+
+		// Class for when element is below threshold
+		.pin-bottom {
+			position: relative;
+		}
+
+		// Class for when element is pinned
+		.pinned {
+			position: fixed !important;
+		}
+
+		.toc-wrapper {
+			padding-top: 42px;
+		}
+		
+		.table-of-contents a.active {
+			border-left-color: #607d8b;
+		}
+		
+		.table-of-contents a:hover {
+			border-left-color: #90a4ae;
+		}
+		
+		@media (max-width: 600px) {
+			nav.top-nav {
+				position: fixed;
+				top: 0;
+				z-index: 1000;
+			}
+			
+			header {
+				height: 122px;
+			}
+		}
+		
+	</style>
+	</head>
+	<body>
+		<header>
+			<nav class="top-nav red lighten-1">
+				<div class="row container">
+					<div class="nav-wrapper">
+						<a class="col page-title">Sam Kelley</a>
+						<a href="#" data-activates="mobile" class="button-collapse right valign-wrapper hide-on-med-and-up"><i class="material-icons" style='line-height:inherit'>menu</i></a>
+						<ul class="side-nav" id="mobile">
+							<li><a href="#aboutme">About me</a></li>
+							<li><a href="#portfolio">Portfolio</a></li>
+							<li><a href="#workwithme">Work with me</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<main>			
+			<div class="row container">
+				<div class="col s12 m9 l10">
+					<div id="aboutme" class="section scrollspy">
+						<h4>About me</h4>
+						<p class="flow-text">I am currently a computer science student at Metropolitan State University in Saint Paul. This is my second take at the whole college thing. I was initially an electrical engineering student at the University of Minnesota. I have worked on various software development projects over the past 10 years. I love learning about new technologies and finding new ways to deliver emerging software to everyday people.</p>
+						<p class="flow-text">I started off making webpages for friends and family in high school. Later, I moved on to developing electrical components for embedded systems on solar cars and, most recently, worked on developing vital technology in the regenerative medicine sector. I have worked on various smaller projects including phone apps, WordPress themes/plugins, and game mods.</p>
+						<p class="flow-text">When I'm not working or playing on my computer, my hobbies are cooking, RPGs (the kind with sheets of paper and dice) and riding my bike (the kind that you have to pedal).</p>
+					</div>
+					<div id="portfolio" class="section scrollspy">
+						<h4>Portfolio</h4>
+						<ul class="row" id="staggered-test">
+							<li class="card small col s12 l6" style='opacity:0;padding:0'>
+								<div class="card-image waves-effect waves-block waves-light">
+									<img class="activator tooltipped" data-position="top" data-delay="50" data-tooltip="e-commerce website made for a class" src="img/plusonebooks.png">
+								</div>
+								<div class="card-content" >
+									<span class="card-title activator grey-text text-darken-4">Metro State University<i class="material-icons right">more_vert</i></span>
+									<p><a href="http://www.metrostate.edu/">http://www.metrostate.edu/</a></p>
+								</div>
+								<div class="card-reveal">
+									<span class="card-title grey-text text-darken-4">Metro State University<i class="material-icons right">close</i></span>
+									<p>Metro State is helping me to turn my eclectic experience into a more formalized degree that tells employers I know the underlying concepts. Working with professors in the field to create projects up to industry standards has been extremely insightful.</p>
+								</div>
+							</li> 
+							<li class="card small col s12 l6" style='opacity:0;padding:0'>
+								<div class="card-image waves-effect waves-block waves-light">
+									<img class="activator tooltipped" src="img/yggi.png" data-position="top" data-delay="50" data-tooltip="website created for startup biotech lab">
+								</div>
+								<div class="card-content">
+									<span class="card-title activator grey-text text-darken-4">Biotech startup<i class="material-icons right">more_vert</i></span>
+									<p><a href="#"></a></p>
+								</div>
+								<div class="card-reveal">
+									<span class="card-title grey-text text-darken-4">Biotech startup<i class="material-icons right">close</i></span>
+									<p>Using my electrical engineering background, I developed New technologies that may someday be a part of the future of regenerative medicine. I had crash courses in material sciences and mechanical engineering. The start-up struggled to raise capital for the FDA approval processes but, lessons learned on product engineering and building a business will stick with me.</p>
+								</div>
+							</li> 
+							<li class="card small col s12 l6" style='opacity:0;padding:0'>
+								<div class="card-image waves-effect waves-block waves-light">
+									<img class="activator tooltipped" src="img/centaurus_II.jpg"  data-position="top" data-delay="50" data-tooltip="Centaurus II was one of the cars I built and designed">
+								</div>
+								<div class="card-content">
+									<span class="card-title activator grey-text text-darken-4">UMN solar vehicle project<i class="material-icons right">more_vert</i></span>
+									<p><a href="http://umnsvp.org/history/">http://umnsvp.org/history/</a></p>
+								</div>
+								<div class="card-reveal">
+									<span class="card-title grey-text text-darken-4">UMN solar vehicle project<i class="material-icons right">close</i></span>
+									<p>As a member of the University of Minnesota solar vehicle project, I developed, built, and tested the electrical systems that powered this amazing team. The cars I built went on to win races and awards. Working with the future of transportation was an amazing experience.</p>
+								</div>
+							</li> 
+						</ul>
+					</div>
+					<div id="workwithme" class="section scrollspy">
+						<h4>Work with me</h4>
+						<p class="flow-text">You have now seen some of what I have done. I will be wrapping up my bachelor's degree this spring and I am currently looking for work or projects in the field. While I am in school, local jobs only please; however, I'd love to see a bit more of the country after I'm all finished up. If you think we should work together, contact me below. If you need the formalities of a resume and contacts, I'd be happy to provide them upon request. I'm glad you took the time to learn a bit about me.</p>
+					</div>
+					<div id="contact" class="section scrollspy">
+						<h4>Contact</h4>
+						<div class="input-field col s12">
+							<div class="row">
+								<form class="col s12">
+									<div class="row">
+										<div class="input-field col s12 l6">
+											<input id="icon_prefix" type="text" class="validate">
+											<label for="icon_prefix">Name</label>
+										</div>
+									</div>
+									<div class="row">
+										<div class="input-field col s12 l6">
+											<input id="icon_telephone" type="tel" class="validate">
+											<label for="icon_telephone">Email</label>
+										</div>
+									</div>
+									<div class="row">
+										<div class="input-field col s12">
+											<textarea id="textarea1" class="materialize-textarea" length="512"></textarea>
+											<label for="textarea1">Message</label>
+										</div>
+									</div>
+									<a class="btn blue-grey darken-2 waves-effect waves-light" onclick="Materialize.toast('email sent', 4000)">Send</a>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col hide-on-small-only m3 l2 ">
+					<div class="toc-wrapper pin-top" style="top: 0px;">
+						<ul class="section table-of-contents">
+							<li><a href="#aboutme">About me</a></li>
+							<li><a href="#portfolio">Portfolio</a></li>
+							<li><a href="#workwithme">Work with me</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="page-footer red lighten-1">
+			<div class="container">
+				<div class="row">
+					<div class="col l6 s12">
+						<div class="row">
+							<div class="col offset-s3 s6 m3">
+								<div class="image-container">
+									<img class="circle" src="skelley.png" style="width:100%">
+								</div>
+							</div>
+							<div class="col s12 m9">
+								<h5 class="white-text">Sam Kelley</h5>
+								<p class="grey-text text-lighten-4">Loves long walks in the middle of the night and reading documentation about things that nobody cares about. On a never ending journey to find the spiciest and noodliest foods humanity can dream up.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col l4 offset-l2 s12">
+						<h5 class="white-text">Follow me</h5>
+						<ul>
+							<li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/">linkedin</a></li>							
+							<li><a class="grey-text text-lighten-3" href="https://www.twitter.com/">twitter</a></li>
+							<li><a class="grey-text text-lighten-3" href="https://plus.google.com/">G+</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer-copyright">
+				<div class="container">
+					© 2016 Sam Kelley
+					<a class="grey-text text-lighten-4 right" href="#!"></a>
+				</div>
+			</div>
+		</footer>
+		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				
+				$('.scrollspy').scrollSpy();
+				$('.toc-wrapper').pushpin({ top: $('.toc-wrapper').offset().top });
+				$('select').material_select();
+				$(".button-collapse").sideNav({closeOnClick: true});
+				$('.collapsible').collapsible();
+				var options = [
+					{selector: '#staggered-test', offset: 320, callback: function(el) {
+						Materialize.showStaggeredList($(el));
+					} },
+					{selector: '#aboutme', offset:0, callback: function(el) {
+						if( 'fixed' == $('.top-nav').css('position') ) {
+							$('.top-nav').animate({height:"48px",lineHeight:"48px",fontSize:"32px"},400);
+						}
+					} }	
+				];
+				Materialize.scrollFire(options);	
+			});
+		</script>
+	</body>
+</html>
